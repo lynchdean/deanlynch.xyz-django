@@ -1,21 +1,36 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-    <h1>Projects</h1>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Projects <img src="{% static "img/code-slash.svg" %}" alt="terminal icon" width="60"
+                                                height="60"></h1>
+            <p class="lead">A list of all my public projects, generated from my <a
+                    href="https://github.com/lynchdean">GitHub profile</a>
+            </p>
+        </div>
+    </div>
+
     <div class="row">
         {% for project in projects %}
-            <div class="col-md-4">
-                <div class="card mb-2">
-                    <img class="card-img-top" src="{% static project.image %}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ project.title }}</h5>
-                        <p class="card-text">{{ project.description }}</p>
-                        <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">
-                            Read More
-                        </a>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="row no-gutters">
+                        <div class="col-md-2 my-auto">
+                            <img class="card-img" src="{% static project.image %}">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ project.title }}</h5>
+                                <p class="card-text">{{ project.technology }}</p>
+                                <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         {% endfor %}
+
     </div>
 {% endblock %}
