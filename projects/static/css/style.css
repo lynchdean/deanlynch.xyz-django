@@ -1,0 +1,16 @@
+.jumbotron {
+    color: white;
+    background-image: url("../img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.jumbotron a {
+    color: lightskyblue;
+}
+
+.unsplash {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
