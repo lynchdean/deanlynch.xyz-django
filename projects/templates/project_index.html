@@ -30,17 +30,12 @@
                 <div class="col-md-6">
                     <div class="card mb-4 border-0 bg-light">
                         <h5 class="card-header">{{ project.title }}</h5>
-                        <div class="row no-gutters">
-                            <div class="col-md-2 my-auto">
-                                <img class="card-img m-2" src="{% static project.image %}">
-                            </div>
-                            <div class="col-md-10">
-                                <div class="card-body">
-                                    <span class="badge badge-primary">{{ project.technology }}</span>
-                                    <p class="card-text">{{ project.description }}</p>
-                                    <a href="{% url 'project_detail' project.pk %}" class="card-link">Read More...</a>
-                                </div>
-                            </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ project.description }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="badge badge-primary">{{ project.technology }}</span>
+                                <a href="{% url 'project_detail' project.pk %}" style="float:right;">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +48,7 @@
                             <a href="?page=1" class="text-light">&laquo; First</a>
                         </button>
                         <button type="button" class="btn btn-secondary">
-                            <a href="?page={{ page_obj.previous_page_number }}" class="text-light">Previous</a>
+                            <a href="?page={{ page_obj.previous_page_number }}" class="text-light">&lsaquo; Previous</a>
                         </button>
                     {% endif %}
                     <button type="button" class="btn btn-secondary">
@@ -61,7 +56,7 @@
                     </button>
                     {% if page_obj.has_next %}
                         <button type="button" class="btn btn-secondary">
-                            <a href="?page={{ page_obj.next_page_number }}" class="text-light">Next</a>
+                            <a href="?page={{ page_obj.next_page_number }}" class="text-light">Next &rsaquo;</a>
                         </button>
                         <button type="button" class="btn btn-secondary">
                             <a href="?page={{ page_obj.paginator.num_pages }}" class="text-light">Last &raquo;</a>
