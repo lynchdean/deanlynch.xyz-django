@@ -9,8 +9,15 @@
     color: lightskyblue;
 }
 
-.unsplash {
+.bottom-right {
     position: absolute;
     bottom: 1em;
     right: 1em;
+}
+
+p {
+     width: 80%;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
 }

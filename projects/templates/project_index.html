@@ -10,25 +10,35 @@
             </p>
 
             {# Jumbotron background image credit #}
-            <a class="unsplash" style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@rxspawn?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Florian Olivo"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Florian Olivo</span></a>
+            <a class="bottom-right"
+               style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+               href="https://unsplash.com/@rxspawn?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+               target="_blank" rel="noopener noreferrer"
+               title="Download free do whatever you want high-resolution photos from Florian Olivo"><span
+                    style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                      style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+                                                                      viewBox="0 0 32 32"><title>unsplash-logo</title><path
+                    d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span
+                    style="display:inline-block;padding:2px 3px">Florian Olivo</span></a>
 
         </div>
     </div>
 
     <div class="container">
         <div class="row">
-            {% for project in projects %}
+            {% for project in page_obj %}
                 <div class="col-md-6">
-                    <div class="card mb-4">
+                    <div class="card mb-4 border-0 bg-light">
+                        <h5 class="card-header">{{ project.title }}</h5>
                         <div class="row no-gutters">
                             <div class="col-md-2 my-auto">
-                                <img class="card-img" src="{% static project.image %}">
+                                <img class="card-img m-2" src="{% static project.image %}">
                             </div>
                             <div class="col-md-10">
                                 <div class="card-body">
-                                    <h5 class="card-title">{{ project.title }}</h5>
-                                    <p class="card-text">{{ project.technology }}</p>
-                                    <a href="{% url 'project_detail' project.pk %}" class="btn btn-primary">Read More</a>
+                                    <span class="badge badge-primary">{{ project.technology }}</span>
+                                    <p class="card-text">{{ project.description }}</p>
+                                    <a href="{% url 'project_detail' project.pk %}" class="card-link">Read More...</a>
                                 </div>
                             </div>
                         </div>
@@ -36,6 +46,29 @@
                 </div>
             {% endfor %}
 
+            <div class="container text-center">
+                <div class="btn-group mb-2" role="group" aria-label="Basic example">
+                    {% if page_obj.has_previous %}
+                        <button type="button" class="btn btn-secondary">
+                            <a href="?page=1" class="text-light">&laquo; First</a>
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <a href="?page={{ page_obj.previous_page_number }}" class="text-light">Previous</a>
+                        </button>
+                    {% endif %}
+                    <button type="button" class="btn btn-secondary">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                    </button>
+                    {% if page_obj.has_next %}
+                        <button type="button" class="btn btn-secondary">
+                            <a href="?page={{ page_obj.next_page_number }}" class="text-light">Next</a>
+                        </button>
+                        <button type="button" class="btn btn-secondary">
+                            <a href="?page={{ page_obj.paginator.num_pages }}" class="text-light">Last &raquo;</a>
+                        </button>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}

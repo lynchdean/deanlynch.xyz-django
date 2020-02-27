@@ -4,11 +4,6 @@ import requests
 import yaml
 import django
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'personal_website.settings'
-django.setup()
-
-from projects.models import Project
-
 
 def get_projects():
     with open("secrets.yaml", 'r') as file:
@@ -20,8 +15,12 @@ def get_projects():
 
 
 def main():
-    projects = get_projects()
+    os.environ['DJANGO_SETTINGS_MODULE'] = 'personal_website.settings'
+    django.setup()
 
+    from projects.models import Project
+
+    projects = get_projects()
     Project.objects.all().delete()
 
     for p_data in projects:
