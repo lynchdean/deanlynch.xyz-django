@@ -20,7 +20,6 @@
                                                                       viewBox="0 0 32 32"><title>unsplash-logo</title><path
                     d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span
                     style="display:inline-block;padding:2px 3px">Florian Olivo</span></a>
-
         </div>
     </div>
 
@@ -52,7 +51,7 @@
                         </button>
                     {% endif %}
                     <button type="button" class="btn btn-secondary">
-                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                        {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
                     </button>
                     {% if page_obj.has_next %}
                         <button type="button" class="btn btn-secondary">
