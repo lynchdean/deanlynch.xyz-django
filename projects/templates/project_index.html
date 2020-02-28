@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="container">
+{#    <div class="container">#}
         <div class="row">
             {% for project in page_obj %}
                 <div class="col-md-6">
@@ -50,7 +50,7 @@
                             <a href="?page={{ page_obj.previous_page_number }}" class="text-light">&lsaquo; Previous</a>
                         </button>
                     {% endif %}
-                    <button type="button" class="btn btn-secondary">
+                    <button type="button" class="btn btn-secondary active">
                         {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
                     </button>
                     {% if page_obj.has_next %}
@@ -64,5 +64,5 @@
                 </div>
             </div>
         </div>
-    </div>
+{#    </div>#}
 {% endblock %}
