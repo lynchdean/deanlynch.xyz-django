@@ -14,7 +14,6 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link active" href="{% url 'about' %}">About</a>
-                {#                <a class="nav-link active" href="{% url 'about' %} }">About</a>#}
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
@@ -37,12 +36,7 @@
     </div>
 </nav>
 
-{# TODO Remove this when about and contact pages are added #}
-<div class="alert alert-warning mb-0 text-center" role="alert">
-     <strong>This website is still under construction.</strong> About and Contact pages to be added soon!
-</div>
-
-<div class="container">
+<div>
     {% block page_content %}{% endblock %}
 </div>
 

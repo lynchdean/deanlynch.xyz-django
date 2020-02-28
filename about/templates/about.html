@@ -1,5 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-    <p>About page goes here</p>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Dean Lynch</h1>
+            <p class="lead">Software Engineer</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>Introduction</h3>
+        <div class="card text-white bg-dark mb-2">
+            {#        <div class="card-header">Introduction</div>#}
+            <div class="card-body">
+                <p class="card-text">Hi, I'm Dean. I graduated from Computer Applications & Software Engineering in DCU
+                    last year.</p>
+                <p class="card-text">I'm currently looking for a graduate or entry-level position in software
+                    engineering, and I'm available to interview and start work immediately.</p>
+                <p class="card-text">I'm primarily interested in Python, Java, or JavaScript roles, front-end or
+                    back-end, but I'm open to anything else if it's a good opportunity for me to learn and gain
+                    experience.
+                    I'm eager to start working so please get in touch with me via LinkedIn or email if you might have
+                    any suitable positions!</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
