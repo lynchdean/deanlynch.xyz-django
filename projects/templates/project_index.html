@@ -34,7 +34,11 @@
                         </div>
                         <div class="card-footer">
                             <span class="badge badge-primary">{{ project.technology }}</span>
-                                <a href="{% url 'project_detail' project.pk %}" style="float:right;">Read More</a>
+                                <a href="{% url 'project_detail' project.pk %}" style="float:right;">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                                        Read More
+                                    </button>
+                                </a>
                         </div>
                     </div>
                 </div>

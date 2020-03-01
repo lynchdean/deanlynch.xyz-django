@@ -6,7 +6,7 @@ import django
 
 
 def get_projects():
-    with open("secrets.yaml", 'r') as file:
+    with open("secrets.yml", 'r') as file:
         secrets = yaml.load(file, Loader=yaml.FullLoader)
 
     gh = secrets['github']
