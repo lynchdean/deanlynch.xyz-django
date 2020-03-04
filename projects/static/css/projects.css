@@ -1,0 +1,18 @@
+#project-jumbo {
+    color: white;
+    background-image: url("../img/pawel-czerwinski-JEV7CrJTUNE-unsplash.jpg");
+    background-size: cover;
+    position: relative;
+    text-decoration: none;
+}
+
+#project-jumbo a {
+    color: white;
+}
+
+#project-desc {
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

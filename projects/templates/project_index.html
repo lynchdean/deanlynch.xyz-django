@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <div class="jumbotron jumbotron-fluid">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/projects.css' %}">
+    </head>
+
+    <div id="project-jumbo" class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Projects</h1>
             <p class="lead">A list of all my public projects, generated from my <a
@@ -30,7 +33,7 @@
                     <div class="card mb-4 border-0 bg-light">
                         <h5 class="card-header">{{ project.title }}</h5>
                         <div class="card-body">
-                            <p class="card-text">{{ project.description }}</p>
+                            <p id="project-desc" class="card-text">{{ project.description }}</p>
                         </div>
                         <div class="card-footer">
                             <span class="badge badge-primary">{{ project.technology }}</span>

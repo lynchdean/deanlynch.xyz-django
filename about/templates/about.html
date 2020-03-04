@@ -1,27 +1,106 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-    <div class="jumbotron jumbotron-fluid">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    </head>
+
+    <div id="about-jumbo" class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Dean Lynch</h1>
             <p class="lead">Software Engineer</p>
         </div>
+        {# Jumbotron background image credit #}
+        <a class="bottom-right"
+           style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px"
+           href="https://unsplash.com/@pawel_czerwinski?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+           target="_blank" rel="noopener noreferrer"
+           title="Download free do whatever you want high-resolution photos from Paweł Czerwiński"><span
+                style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg"
+                                                                  style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white"
+                                                                  viewBox="0 0 32 32"><title>unsplash-logo</title><path
+                d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span
+                style="display:inline-block;padding:2px 3px">Paweł Czerwiński</span></a>
     </div>
 
-    <div class="container">
-        <h3>Introduction</h3>
-        <div class="card text-white bg-dark mb-2">
-            <div class="card-body">
-                <p class="card-text">Hi, I'm Dean. I graduated from Computer Applications & Software Engineering in DCU
-                    last year.</p>
-                <p class="card-text">I'm currently looking for a graduate or entry-level position in software
-                    engineering, and I'm available to interview and start work immediately.</p>
-                <p class="card-text">I'm primarily interested in Python, Java, or JavaScript roles, front-end or
-                    back-end, but I'm open to anything else if it's a good opportunity for me to learn and gain
-                    experience.
-                    I'm eager to start working so please get in touch with me via LinkedIn or email if you might have
-                    any suitable positions!</p>
+
+
+    <div class="container-fluid">
+        <div id="intro">
+            <h4 class="text-primary">Introduction:</h4>
+            <p>Hi, I'm Dean. I graduated from Computer Applications & Software Engineering in DCU in 2019.</p>
+            <p>I'm currently looking for a graduate or entry-level position in software
+                engineering, and I'm available to interview and start work immediately.</p>
+            <p>I'm primarily interested in Python, Java, or JavaScript roles, but I'm open to anything else if it's
+                a good opportunity for me to learn and gain experience.
+                I'm eager to start working so please get in touch with me via LinkedIn or email if you might have
+                any suitable positions!</p>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark text-light">
+        <div class="container">
+            <div class="card-deck">
+                <div class="card bg-dark text-center border-0">
+                    <img class="card-img-top" src="{% static "img/dcu-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">DCU Graduate</h5>
+                    </div>
+                </div>
+                <div class="card bg-dark text-center border-0">
+                    <img class="card-img-top" src="{% static "img/dublin-outline.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Dublin Based</h5>
+                    </div>
+                </div>
+                <div class="card bg-dark text-center border-0">
+                    <img class="card-img-top" src="{% static "img/available-now.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Ready to start immediately</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="container-fluid bg-primary text-light">
+        <div class="container text-center pt-4">
+            <h3>Technologies</h3>
+            <div class="card-deck">
+                <div class="card bg-primary text-center border-0">
+                    <img class="card-img-top" src="{% static "img/python-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Python</h5>
+                    </div>
+                </div>
+                <div class="card bg-primary text-center border-0">
+                    <img class="card-img-top" src="{% static "img/java-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Java</h5>
+                    </div>
+                </div>
+                <div class="card bg-primary text-center border-0">
+                    <img class="card-img-top" src="{% static "img/js-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">JavaScript</h5>
+                    </div>
+                </div>
+                <div class="card bg-primary text-center border-0">
+                    <img class="card-img-top" src="{% static "img/html-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">HTML</h5>
+                    </div>
+                </div>
+                <div class="card bg-primary text-center border-0">
+                    <img class="card-img-top" src="{% static "img/css-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">CSS</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
 {% endblock %}

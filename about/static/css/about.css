@@ -1,0 +1,21 @@
+#about-jumbo {
+    color: white;
+    background-image: url("../img/pawel-czerwinski-XaiP_NLrtoM-unsplash.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+#headshot {
+    margin-top: 1em;
+    border-radius: 50%;
+    width: 75%;
+    max-width: 120px;
+    float: right;
+}
+
+#intro {
+    padding: 2% 10% 2% 10%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5em;
+}
+
