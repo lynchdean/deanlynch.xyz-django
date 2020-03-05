@@ -15,7 +15,7 @@ def get_projects():
 
 
 def main():
-    os.environ['DJANGO_SETTINGS_MODULE'] = 'personal_website.settings'
+    os.environ['DJANGO_SETTINGS_MODULE'] = 'dl-xyz.settings'
     django.setup()
 
     from projects.models import Project
