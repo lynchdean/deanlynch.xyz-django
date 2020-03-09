@@ -7,5 +7,4 @@ urlpatterns = [
     path('', views.about, name='about'),
     path('admin/', admin.site.urls),
     path('projects/', include('projects.urls'), name='project_index'),
-    # path('about/', include('about.urls'), name='about'),
 ]

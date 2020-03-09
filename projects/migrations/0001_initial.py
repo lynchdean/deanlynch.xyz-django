@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=100)),
                 ('description', models.TextField()),
-                ('technology', models.CharField(max_length=20)),
+                ('technology', models.CharField(max_length=20, null=True)),
                 ('image', models.FilePathField(path='/img')),
             ],
         ),
