@@ -10,7 +10,7 @@ def get_projects():
         secrets = yaml.load(file, Loader=yaml.FullLoader)
 
     gh = secrets['github']
-    response_text = requests.get(gh['repos_url'], auth=(gh['username'], gh['token'])).text
+    response_text = requests.get(gh['repos-url'], auth=(gh['username'], gh['token'])).text
     return json.loads(response_text)
 
 
