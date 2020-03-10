@@ -1,5 +1,5 @@
 """
-WSGI config for dl-xyz project.
+WSGI config for homepage project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

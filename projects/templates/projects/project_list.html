@@ -1,0 +1,62 @@
+{% block page_content %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'projects/css/style.css' %}">
+
+    <div id="project-jumbo" class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Projects</h1>
+            <p class="lead">A list of all my public projects, generated from my <a
+                    href="https://github.com/lynchdean">GitHub profile</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            {% for project in page_obj %}
+                <div class="col-md-6">
+                    <div class="card mb-4 border-0 bg-light">
+                        <h5 class="card-header">{{ project.title }}</h5>
+                        <div class="card-body">
+                            <p id="project-desc" class="card-text">{{ project.description }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="badge badge-primary">{{ project.technology }}</span>
+                            <a href="{% url 'projects:detail' project.pk %}" style="float:right;">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">
+                                    Read More
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% if page_obj.paginator.num_pages > 0 %}
+                <div class="container text-center">
+                    <div class="btn-group mb-2" role="group" aria-label="Basic example">
+                        {% if page_obj.has_previous %}
+                            <button type="button" class="btn btn-secondary">
+                                <a href="?page=1" class="text-light">&laquo; First</a>
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <a href="?page={{ page_obj.previous_page_number }}" class="text-light">&lsaquo;
+                                    Previous</a>
+                            </button>
+                        {% endif %}
+                        <button type="button" class="btn btn-secondary active">
+                            {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                        </button>
+                        {% if page_obj.has_next %}
+                            <button type="button" class="btn btn-secondary">
+                                <a href="?page={{ page_obj.next_page_number }}" class="text-light">Next &rsaquo;</a>
+                            </button>
+                            <button type="button" class="btn btn-secondary">
+                                <a href="?page={{ page_obj.paginator.num_pages }}" class="text-light">Last &raquo;</a>
+                            </button>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

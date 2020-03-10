@@ -2,7 +2,8 @@ from django.urls import path
 
 from . import views
 
+app_name = 'projects'
 urlpatterns = [
-    path("", views.project_index, name="project_index"),
-    path("<int:pk>/", views.project_detail, name="project_detail"),
+    path('', views.ProjectIndexView.as_view(), name='index'),
+    path('<int:pk>/', views.ProjectDetailView.as_view(), name='detail'),
 ]

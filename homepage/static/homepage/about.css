@@ -1,6 +1,6 @@
 #about-jumbo {
     color: white;
-    background-image: url("../img/pawel-czerwinski-XaiP_NLrtoM-unsplash.jpg");
+    background-image: url("img/pawel-czerwinski-XaiP_NLrtoM-unsplash.jpg");
     background-size: cover;
     position: relative;
 }
@@ -14,7 +14,7 @@
 }
 
 #intro {
-    padding: 2% 10% 2% 10%;
+    /*padding: 2% 10% 2% 10%;*/
     font-family: 'Roboto Mono', monospace;
     font-size: 1.5em;
 }

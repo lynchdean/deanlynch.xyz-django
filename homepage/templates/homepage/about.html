@@ -1,0 +1,139 @@
+{% block page_content %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'homepage/about.css' %}">
+
+    <div class="container-fluid bg-light text-dark py-5">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-7">
+                <div class="bg-light">
+                    <div id="intro">
+                        <h4 class="text-primary">Introduction:</h4>
+                        <p>Hi, I'm Dean. I graduated from Computer Applications & Software Engineering in
+                            Dublin City University in 2019.</p>
+                        <p>I'm currently looking for a graduate or entry-level position in software
+                            engineering, and I'm available to interview and start work immediately.</p>
+                        <p>I'm primarily interested in Python, Java, or JavaScript roles, but I'm open to anything else
+                            if it's
+                            a good opportunity for me to learn and gain experience.
+                            I'm eager to start working so please get in touch with me via LinkedIn or email if you might
+                            have any suitable positions!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 d-flex align-items-center">
+                <div class="card-deck">
+                    <div class="card bg-transparent text-center border-0">
+                        <img class="card-img-top" src="{% static "homepage/img/dcu-logo.png" %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="small">DCU Graduate</h5>
+                        </div>
+                    </div>
+                    <div class="card bg-transparent text-center border-0">
+                        <img class="card-img-top" src="{% static "homepage/img/dublin-outline.png" %}"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="small">Dublin Based</h5>
+                        </div>
+                    </div>
+                    <div class="card bg-transparent text-center border-0">
+                        <img class="card-img-top" src="{% static "homepage/img/available-now.png" %}"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="small">Available Immediately</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-primary text-light">
+        <div class="container text-center pt-4">
+            <h3>Primary Technologies</h3>
+            <div class="card-deck pt-4">
+                <div class="card bg-transparent text-center border-0"></div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/python-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Python</h5>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0"></div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/java-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Java</h5>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0"></div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/js-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">JavaScript</h5>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-info text-light">
+        <div class="container text-center pt-4">
+            <h3>Other Skills</h3>
+            <div class="card-deck pt-4">
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/ts-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="small">TypeScript</p>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/angular-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="small">Angular</p>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/html-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="small">HTML</p>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/css-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="small">CSS</p>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/git-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="small">git</p>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/bash-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="small">Bash</p>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/linux-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="small">Linux</p>
+                    </div>
+                </div>
+                <div class="card bg-transparent text-center border-0">
+                    <img class="card-img-top" src="{% static "homepage/img/windows-logo.png" %}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="small">Windows</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
